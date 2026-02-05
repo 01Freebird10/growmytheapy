@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #FCF8F3;
+  --color-foreground: #003E3E;
+  --color-primary: #0D7C66;
+  --color-secondary: #F1E5D1;
+  --color-accent: #C49B3B;
+  --color-card: #ffffff;
+  --color-card-foreground: #003E3E;
+
+  --font-heading: "Outfit", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-body);
+    line-height: 1.6;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.2;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-white px-6 py-3 rounded-full font-medium transition-all hover:bg-primary/90 hover:scale-105 inline-block;
+  }
+
+  .btn-outline {
+    @apply border-2 border-primary text-primary px-6 py-3 rounded-full font-medium transition-all hover:bg-primary hover:text-white inline-block;
+  }
+
+  .section-padding {
+    @apply py-20 px-6 max-w-7xl mx-auto;
+  }
+}
